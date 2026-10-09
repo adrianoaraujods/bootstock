@@ -52,9 +52,93 @@
               GitHub
             </a>
           </li>
+          <li class="nav-item ms-2 d-flex align-items-center">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              command="show-modal"
+              commandfor="login-dialog"
+            >
+              <i class="bi bi-box-arrow-in-right"></i> Entrar
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
+
+    <dialog id="login-dialog" class="p-0 border-0 bg-transparent">
+      <div class="card">
+        <div
+          class="card-header bg-primary bg-gradient text-white d-flex align-items-center justify-content-between"
+        >
+          <h3 class="h5 modal-title mb-0" id="login-titulo">
+            <i class="bi bi-box-arrow-in-right"></i> Entrar
+          </h3>
+
+          <button
+            class="btn-close btn-close-white"
+            aria-label="Fechar"
+            type="button"
+            command="close"
+            commandfor="login-dialog"
+          ></button>
+        </div>
+
+        <div class="card-body">
+          <form class="row g-3">
+            <div class="col-12">
+              <label for="login-email" class="form-label">E-mail</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-envelope"></i
+                ></span>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="login-email"
+                  placeholder="joao@email.com"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="login-senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="login-senha" />
+              <div class="form-text">
+                <a href="#">Esqueceu a senha?</a>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="login-lembrar"
+                  checked
+                />
+                <label class="form-check-label" for="login-lembrar">
+                  Lembrar de mim
+                </label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-lg w-100">
+                Entrar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-footer text-center">
+          <p class="small text-body-secondary mb-0">
+            Ainda não tem uma conta?
+            <a href="./cadastro.html">Cadastre-se</a>
+          </p>
+        </div>
+      </div>
+    </dialog>
 
     <main>
       <section class="bg-body-tertiary">
